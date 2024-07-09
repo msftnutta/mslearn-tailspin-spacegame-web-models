@@ -32,13 +32,13 @@ steps:
     arguments: '--no-build --configuration $(buildConfiguration)'
     versioningScheme: byPrereleaseNumber
     majorVersion: '1'
-    minorVersion: '1'
+    minorVersion: '0'
     patchVersion: '0'
  
 - task: NuGetCommand@2
   displayName: 'Publish NuGet package'
   inputs:
     command: push
-    feedPublish: 'Tailspin.SpaceGame.Web.Modelss'
+    feedPublish: 'Tailspin.SpaceGame.Web.Models'
     allowPackageConflicts: true
   condition: succeeded()
